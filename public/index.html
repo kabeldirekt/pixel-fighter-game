@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Retro Pixel Fighter - Ein 2D Kampfspiel im Browser">
+  <title>Pixel Fighter</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Menu Screen -->
+  <div id="menu" class="screen active">
+    <h1 class="title">PIXEL FIGHTER</h1>
+    <div class="menu-buttons">
+      <button id="btn-vs-cpu" class="menu-btn">VS CPU</button>
+      <button id="btn-vs-player" class="menu-btn">2 SPIELER</button>
+    </div>
+    <div id="difficulty-select" class="hidden">
+      <h2>Schwierigkeit</h2>
+      <button class="diff-btn" data-diff="easy">LEICHT</button>
+      <button class="diff-btn" data-diff="medium">MITTEL</button>
+      <button class="diff-btn" data-diff="hard">SCHWER</button>
+    </div>
+    <p class="instructions">
+      <strong>Steuerung:</strong><br>
+      P1: WASD + F/G | P2: Pfeiltasten + K/L<br>
+      Mobile: Touch-Buttons
+    </p>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen">
+    <div id="hud">
+      <div class="player-hud">
+        <span class="player-name">BLAZE</span>
+        <div class="health-bar">
+          <div id="p1-health" class="health-fill"></div>
+        </div>
+        <span id="p1-wins" class="wins">0</span>
+      </div>
+      <div id="round-display">ROUND 1</div>
+      <div class="player-hud">
+        <span class="player-name">FROST</span>
+        <div class="health-bar">
+          <div id="p2-health" class="health-fill p2"></div>
+        </div>
+        <span id="p2-wins" class="wins">0</span>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="message-overlay" class="hidden">
+      <span id="message-text"></span>
+    </div>
+
+    <!-- Touch Controls -->
+    <div id="touch-controls" class="hidden">
+      <div class="touch-left">
+        <button class="touch-btn" data-action="left">◀</button>
+        <button class="touch-btn" data-action="right">▶</button>
+        <button class="touch-btn jump-btn" data-action="jump">▲</button>
+      </div>
+      <div class="touch-right">
+        <button class="touch-btn attack-btn punch" data-action="punch">👊</button>
+        <button class="touch-btn attack-btn kick" data-action="kick">🦶</button>
+        <button class="touch-btn attack-btn special" data-action="special">⚡</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameover" class="screen">
+    <h1 id="winner-text">SPIELER 1 GEWINNT!</h1>
+    <button id="btn-rematch" class="menu-btn">REMATCH</button>
+    <button id="btn-menu" class="menu-btn">HAUPTMENÜ</button>
+  </div>
+
+  <script src="js/fighter.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/game.js"></script>
+
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.log('SW registration failed:', err));
+    }
+  </script>
+</body>
+</html>

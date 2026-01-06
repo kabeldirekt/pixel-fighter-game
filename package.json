@@ -1,0 +1,16 @@
+{
+  "name": "street-fighter-game",
+  "version": "1.0.0",
+  "description": "A retro pixel-art fighting game - PWA enabled",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["game", "fighting", "pwa", "canvas"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

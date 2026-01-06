@@ -1,0 +1,19 @@
+{
+  "name": "Pixel Fighter",
+  "short_name": "PixelFighter",
+  "description": "Retro 2D Kampfspiel im Pixel-Art Stil",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"]
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#1a1a2e"/>
+  <rect x="156" y="120" width="80" height="120" fill="#e74c3c"/>
+  <rect x="276" y="120" width="80" height="120" fill="#3498db"/>
+  <rect x="170" y="90" width="52" height="35" fill="#fdbf6f"/>
+  <rect x="290" y="90" width="52" height="35" fill="#fdbf6f"/>
+  <rect x="170" y="70" width="52" height="25" fill="#c0392b"/>
+  <rect x="290" y="70" width="52" height="25" fill="#2980b9"/>
+  <rect x="180" y="100" width="10" height="10" fill="#000"/>
+  <rect x="205" y="100" width="10" height="10" fill="#000"/>
+  <rect x="300" y="100" width="10" height="10" fill="#000"/>
+  <rect x="325" y="100" width="10" height="10" fill="#000"/>
+  <rect x="236" y="160" width="40" height="8" fill="#f39c12"/>
+  <rect x="160" y="240" width="72" height="80" fill="#2c3e50"/>
+  <rect x="280" y="240" width="72" height="80" fill="#1a1a2e"/>
+  <rect x="130" y="150" width="30" height="60" fill="#fdbf6f"/>
+  <rect x="352" y="150" width="30" height="60" fill="#fdbf6f"/>
+  <text x="256" y="400" font-family="Arial Black" font-size="48" fill="#f39c12" text-anchor="middle" font-weight="bold">PIXEL</text>
+  <text x="256" y="460" font-family="Arial Black" font-size="48" fill="#e74c3c" text-anchor="middle" font-weight="bold">FIGHTER</text>
+</svg>
